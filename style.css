@@ -1,5 +1,91 @@
 body {
   color: #404040;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+#container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  border: #404040 solid 4px;
+  align-items: center;
+  border-radius: 24px;
+  background-color: #dddddd;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type='text'] {
+  width: 72%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: grey;
+}
+
+button {
+  background-color: #3d3d3d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4b5a69;
+}
+
+#input-container {
+  display: flex;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+#greeting {
+  background-image: linear-gradient(
+    90deg,
+    hsla(40, 51%, 51%, 1) 0%,
+    hsla(82, 51%, 51%, 1) 22%,
+    hsla(170, 46%, 39%, 1) 45%,
+    hsla(190, 47%, 28%, 1) 65%,
+    hsla(201, 50%, 25%, 1) 81%,
+    hsla(217, 57%, 21%, 1) 95%,
+    hsla(247, 88%, 13%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;
+  animation: animatedText 2s infinite alternate;
+}
+
+@keyframes animatedText {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
 }
