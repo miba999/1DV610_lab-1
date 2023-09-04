@@ -2,6 +2,7 @@
 const nameInput = document.getElementById('nameInput');
 const greetButton = document.getElementById('greetButton');
 const greeting = document.getElementById('greeting');
+const errorText = document.getElementById('errorText');
 
 // generate a random greeting
 const getRandomGreeting = () => {
@@ -21,5 +22,16 @@ const getRandomGreeting = () => {
 
 // add listener to button to generate greeting
 greetButton.addEventListener('click', () => {
-  greeting.textContent = `${getRandomGreeting()} ${nameInput.value}!`;
+  // remove any old messages
+  greeting.textContent = '';
+  errorText.textContent = '';
+
+  // if input field is empty, alert user to enter name before getting a greeting
+  if (nameInput.value === '') {
+    nameInput.style.borderColor = 'red';
+    errorText.textContent = "Don't forget to enter a name!";
+  } else {
+    nameInput.style.borderColor = 'grey';
+    greeting.textContent = `${getRandomGreeting()} ${nameInput.value}!`;
+  }
 });
